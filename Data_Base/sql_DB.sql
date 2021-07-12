@@ -1,4 +1,10 @@
+--CREAMOS NUESTRA BASE DE DATOS 'tisg_DB'
+CREATE DATABASE tisg_DB;
+
+--INDICAMOS QUE BASE DE DATOS USAREMOS
 USE tisg_DB;
+
+--CREAMOS LA TABLA 'Usuarios':
 CREATE TABLE `tisg_DB`.`Usuarios` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `Nombres` VARCHAR(50) NOT NULL,
@@ -8,6 +14,7 @@ CREATE TABLE `tisg_DB`.`Usuarios` (
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
+--CREAMOS LA TABLA 'Clientes':
 CREATE TABLE `tisg_DB`.`Clientes` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `Nombres` VARCHAR(45) NOT NULL,

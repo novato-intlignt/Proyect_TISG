@@ -11,12 +11,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Email = $_POST["Email"];
     $Pass = $_POST["Pass"];
 
+    //Creamos el query de insercion de datos en la tabla deseada
     $query = "INSERT INTO Usuarios 
               (Nombres,              Username,           Email,          Pass) 
     VALUES('" . $Nombres . "','" . $Username . "','" . $Email . "','" . $Pass . "')";
     $resultado = $mysql->query($query);
 
-    //verificando si se inserto los datos correctamente
+    //Verificando si se inserto los datos correctamente en la tabla
     if ($resultado == true) {
         echo 'El usuario se registro satisfactoriamente';
     } else {
