@@ -6,12 +6,12 @@ USE tisg_DB;
 
 --CREAMOS LA TABLA 'Usuarios':
 CREATE TABLE `tisg_DB`.`Usuarios` (
-    `id` INT NOT NULL AUTO_INCREMENT,
-    `Nombres` VARCHAR(50) NOT NULL,
-    `Username` VARCHAR(30) NULL,
-    `Email` VARCHAR(30) NOT NULL,
-    `Pass` VARCHAR(15) NOT NULL,
-    PRIMARY KEY (`id`)
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `Nombres` VARCHAR(50) NOT NULL,
+  `Username` VARCHAR(30) NULL,
+  `Email` VARCHAR(30) NOT NULL,
+  `Pass` VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
 --CREAMOS LA TABLA 'Clientes':
@@ -23,3 +23,16 @@ CREATE TABLE `tisg_DB`.`Clientes` (
   `Actitud` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
+
+--CREAMOS LA TABLA 'Productos'.
+CREATE TABLE `tisg_DB`.`Productos` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  'idClientes' INT NOT NULL;
+  `Product` VARCHAR(50) NOT NULL,
+  `Code` INT NOT NULL,
+  `Precio` INT NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB;
+
+USE tisg_DB;
+
