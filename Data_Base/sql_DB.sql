@@ -27,12 +27,20 @@ CREATE TABLE `tisg_DB`.`Clientes` (
 --CREAMOS LA TABLA 'Productos'.
 CREATE TABLE `tisg_DB`.`Productos` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  'idClientes' INT NOT NULL;
+  'idClientes' INT NOT NULL,
   `Product` VARCHAR(50) NOT NULL,
   `Code` INT NOT NULL,
   `Precio` INT NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE = InnoDB;
+
+CREATE TABLE `tisg_DB`.`Productos` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `idClientes` INT NOT NULL,
+  `Producto` VARCHAR(50) NOT NULL,
+  `Codigo` INT NOT NULL,
+  `Precio` DECIMAL NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
 
 USE tisg_DB;
-
