@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'edgeinsetsapp.dart';
 
 class ResponsiveApp {
-  final BuildContext _context;
+  BuildContext _context;
   MediaQueryData _mediaQueryData;
   double _textScaleFactor;
   double _scaleFactor;
