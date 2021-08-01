@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "UniquePay",
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.blueGrey[900],
+        scaffoldBackgroundColor: Colors.black87,
         textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: Colors.white),
         pageTransitionsTheme: const PageTransitionsTheme(builders: {
@@ -27,9 +27,9 @@ class MyApp extends StatelessWidget {
           TargetPlatform.windows: FadeUpwardsPageTransitionsBuilder(),
           TargetPlatform.macOS: FadeUpwardsPageTransitionsBuilder(),
         }),
-        primaryColor: Colors.black87,
+        primaryColor: Colors.white,
       ),
-      home: const SiteLayout(),
+      home: SiteLayout(),
     );
   }
 }
