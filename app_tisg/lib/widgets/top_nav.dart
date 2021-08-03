@@ -1,6 +1,6 @@
 import 'package:app_tisg/constants/style.dart';
 import 'package:app_tisg/helpers/responsiveness.dart';
-import 'package:app_tisg/widges/custom_text.dart';
+import 'package:app_tisg/widgets/custom_text.dart';
 
 import 'package:flutter/material.dart';
 
@@ -57,7 +57,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
                   decoration: BoxDecoration(
                       color: active,
                       borderRadius: BorderRadius.circular(30),
-                      border: Border.all(color: black, width: 2)),
+                      border: Border.all(color: dark, width: 2)),
                 ),
               )
             ],
@@ -84,7 +84,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
               padding: const EdgeInsets.all(2),
               margin: const EdgeInsets.all(2),
               child: CircleAvatar(
-                backgroundColor: black,
+                backgroundColor: dark,
                 child: Icon(
                   Icons.person_outline,
                   color: light,

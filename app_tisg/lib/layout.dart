@@ -1,7 +1,7 @@
 import 'package:app_tisg/helpers/responsiveness.dart';
-import 'package:app_tisg/widges/large_screem.dart';
-import 'package:app_tisg/widges/small_screen.dart';
-import 'package:app_tisg/widges/top_nav.dart';
+import 'package:app_tisg/widgets/large_screem.dart';
+import 'package:app_tisg/widgets/small_screen.dart';
+import 'package:app_tisg/widgets/top_nav.dart';
 import 'package:flutter/material.dart';
 
 class SiteLayout extends StatelessWidget {

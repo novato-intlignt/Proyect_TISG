@@ -9,7 +9,7 @@ class LargeScreem extends StatelessWidget {
       children: [
         Expanded(
             child: Container(
-          color: Colors.red,
+          color: Colors.teal[900],
         )),
         Expanded(flex: 5, child: Container(color: Colors.blueGrey[900]))
       ],

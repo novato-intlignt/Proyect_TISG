@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 //
 const int largeScreenSize = 1366; //DESKTOP
-const int mediumScreenSize = 650; //TABLET
+const int mediumScreenSize = 760; //TABLET
 const int smallScreenSize = 360; //MOBILE
 const int customScreenSize = 1100; //CUSTOM
 //
