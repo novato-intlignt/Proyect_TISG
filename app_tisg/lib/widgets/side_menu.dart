@@ -45,7 +45,7 @@ class SideMenu extends StatelessWidget {
               Column(
                 mainAxisSize: MainAxisSize.min, 
                 children: sideMenuItemRoutes.map((itemName) => SideMenuItem(
-                  itemName: itemName = AuthenticationPageRoute, 
+                  itemName: itemName == AuthenticationPageRoute, 
                   onTap: (){
                     if(itemName == )
                   }
