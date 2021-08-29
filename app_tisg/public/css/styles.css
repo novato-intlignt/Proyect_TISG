@@ -1,0 +1,443 @@
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+
+.count-particles {
+    background: #000022;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.js-count-particles {
+    font-size: 1.1em;
+}
+
+#stats, .count-particles {
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles {
+    border-radius: 0 0 3px 3px;
+}
+
+/* IMPORTANDO FUENTES */
+
+@font-face
+{
+    font-family: "Manrope-ExtraBold";
+    src: url("../assets/fonts/Manrope/Manrope-ExtraBold.ttf");
+}
+
+@font-face
+{
+    font-family: "Manrope-Regular";
+    src: url("../assets/fonts/Manrope/Manrope-Regular.ttf");
+}
+@font-face
+{
+    font-family: "Manrope-Bold";
+    src: url("../assets/fonts/Manrope/Manrope-Bold.ttf");
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+header{
+    background: #2B3648;   
+    height: 32.3rem;
+    padding: 48px;
+
+}
+
+nav
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+    padding: .5rem 0;
+}
+nav .contenedor 
+{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 0px;
+}
+
+.contenedor .containerL
+{
+    display: inherit;
+    align-items: center;
+}
+
+/* Icono de la pagina web */
+.containerL img
+{
+    max-width: 100%; 
+    height: 3.5rem;
+    top: 0px;
+
+}
+
+/* Titulo de la pagina web */
+.containerL .containerText h2
+{
+    font-family: "Manrope-ExtraBold";
+    font-size: 18px;
+    color:#FFF;
+    margin-right: 1rem;
+    top: -3.57%;
+
+}
+
+.containerR
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Botn de "Login" */
+.loginbutton a button 
+{
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 8px;
+    background-color: #F1E4FF;
+    border: 2px solid #FFF;
+    font-family: "Manrope-Bold";
+    font-size: 12px;
+    color:#1976D2;
+    outline: none;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+/* Botn de "Sing up" */
+.singupButton a button 
+{
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 8px;
+    background-color: #1976D2;
+    border: 2px solid #1976D2;
+    font-family: "Manrope-Bold";
+    font-size: 12px;
+    color:#FFF;
+    outline: none;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container{
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.containimg{
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.containimg  img{
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    width: auto;
+    position: relative;
+    animation: arriba 1s ease-in;
+}
+
+.textos{
+    width: 50%;
+    color:#fff;
+    position: relative;
+}
+
+.textos h1{
+    font-family: "Manrope-ExtraBold";
+    font-weight: lighter;
+    line-height: 4rem;
+    font-size: 38.6px;
+    text-transform: capitalize;
+    color: #FFF;
+    width: 100%;
+    animation: moverDerecha 1s ease-in;
+    display: inline-block;
+}
+
+.textos h2{
+    font-size: 18px;
+    color:#FFF;
+    font-family: "Manrope-Regular";
+    line-height: 2rem;
+    margin: 2rem 0;
+    width: 100%;
+    animation: moverIzquierda 1s ease-in;
+}
+
+.textos a button{
+    width: 10rem;
+    height: 3rem;
+    background: transparent;
+    font-size: 1rem;
+    font-family: "Manrope-ExtraBold";
+    text-transform: uppercase;
+    color:#FFF;
+    border-radius: 20px;
+    border: 2px solid #FFF;
+    cursor: pointer;
+    animation: arriba 1s ease-in;
+
+}
+
+.wave{
+    height: 133px;
+    width: 100%;
+    background: #2B3648;    
+}
+
+
+@keyframes moverIzquierda{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverDerecha{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes arriba{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@media screen and (min-width: 1500px){
+    .containimg  img{
+        height: 500px;
+    }
+    .texto h1{
+        font-size: 100px;
+    }
+    .texto h2{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width:1000px){
+    .containimg  img{
+        height: 400px;
+    }
+
+}
+
+@media screen and (max-width:800px){
+    .containimg  img{
+        height: 370px;
+    }
+    .textos h1{
+        font-size: 40px;
+    }
+
+    .textos h2{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:700px){
+    .containimg  img{
+        height: 250px;
+    }
+    .textos h1{
+        font-size: 30px;
+    }
+
+    .textos h2{
+        font-size: 15px;
+    }
+    header{
+        background: #2B3648;   
+        height: 42rem;
+        padding: 48px;
+    
+    }
+    
+}
+
+@media screen and (max-width:450px){
+    header{
+        background: #2B3648;   
+        height: 45rem;
+        padding: 48px;
+    
+    }
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .textos{
+        width: 100%;
+        text-align: center;
+    }
+    .textos h1{
+        font-size: 25px;
+    }
+    .wave{
+        height: 100px;
+        width: 100%;
+        background: #2B3648;
+        position: relative;    
+    }    
+}
+
+@media screen and (max-width:340px){
+    header{
+        background: #2B3648;   
+        height: 43rem;
+        padding: 48px;
+    
+    }
+    .containimg  img{
+        height: 160px;
+    }
+    .textos h1{
+        font-size: 20px;
+    }
+    .textos a{
+        width: 120px;
+    }
+    .textos h2{
+        font-size: 14px;
+    }
+    .wave{
+        height: 100px;
+        width: 100%;
+        background: #2B3648;
+        position: relative;    
+    }
+    .loginbutton a button {
+        width: 4rem;
+        height: 1.5rem;
+        background-color: #F1E4FF;
+        border: 2px solid #FFF;
+        font-family: "Manrope-Bold";
+        font-size: 11px;
+        color:#1976D2;
+        outline: none;
+        cursor: pointer;
+        margin-right: 1rem;
+        text-decoration: none;
+    }
+
+    /* Botn de "Sing up" */
+    .singupButton a button{
+        width: 4rem;
+        height: 1.5rem;
+
+        background-color: #1976D2;
+        border: 2px solid #1976D2;
+        font-family: "Manrope-Bold";
+        font-size: 11px;
+        color:#FFF;
+        outline: none;
+        cursor: pointer;
+        margin-right: 1rem;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .containerL img{
+        max-width: 100%; 
+        height: 3.5rem;
+        top: 0px;
+
+    }
+
+    /* Titulo de la pagina web */
+    .containerL .containerText h2{
+        font-family: "Manrope-ExtraBold";
+        font-size: 15px;
+        color:#FFF;
+        margin-right: 1rem;
+        top: -3.57%;
+    }   
+}
+
+
