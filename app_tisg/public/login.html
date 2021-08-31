@@ -1,66 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/login_styles.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="particles-js"></div>
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+            </div>
+          </form>
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
 
-<head>
-	<title>Login</title>
-	<link rel="shortcut icon" href="assets/icons/logo-favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="css/login_styles.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-	<div class="wave">
-		<svg height="50vh" width="100%" id="svg" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg"
-			class="transition duration-300 ease-in-out delay-150" 
-			<rect transform="rotate(90)" >
-			</rect>>
-			<defs>
-				<linearGradient id="linearGradient" gradientTransform="rotate(90 .5 .5)">
-					<stop offset="0%" stop-color="#3a47d5"></stop>
-					<stop offset="100%" stop-color="#00d2ff"></stop>
-				</linearGradient>
-			</rect>
-			</defs>
-			<path
-				d="M 0,600 C 0,600 0,300 0,300 C 66.53553019145804,330.4079528718704 133.07106038291607,360.81590574374076 184,366 C 234.92893961708393,371.18409425625924 270.25128865979383,351.1443298969072 326,324 C 381.74871134020617,296.8556701030928 457.92378497790867,262.60677466863035 534,267 C 610.0762150220913,271.39322533136965 686.0535714285714,314.42857142857144 737,344 C 787.9464285714286,373.57142857142856 813.8619293078057,389.678939617084 876,377 C 938.1380706921943,364.321060382916 1036.4987113402062,322.85567010309273 1108,303 C 1179.5012886597938,283.14432989690727 1224.1432253313699,284.89837997054497 1275,288 C 1325.8567746686301,291.10162002945503 1382.9283873343152,295.5508100147275 1440,300 C 1440,300 1440,600 1440,600 Z"
-				stroke="none" stroke-width="0" fill="url(#linearGradient)"
-				class="transition-all duration-300 ease-in-out delay-150"></path>
-			
-		</svg> </div>
-	<div class="container">
-		<div class="img">
-			<img src="assets/images/bg.svg">
-		</div>
-		<div class="login-content">
-			<form action="index.html">
-				<img src="assets/images/avatar.svg">
-				<h2 class="title">Welcome</h2>
-				<div class="input-div one">
-					<div class="i">
-						<i class="fas fa-user"></i>
-					</div>
-					<div class="div">
-						<h5>Username</h5>
-						<input type="text" class="input">
-					</div>
-				</div>
-				<div class="input-div pass">
-					<div class="i">
-						<i class="fas fa-lock"></i>
-					</div>
-					<div class="div">
-						<h5>Password</h5>
-						<input type="password" class="input">
-					</div>
-				</div>
-				<a href="#">Forgot Password?</a>
-				<input type="submit" class="btn" value="Login">
-			</form>
-		</div>
-	</div>
-	<script type="text/javascript" src="js/login_main.js"></script>
-</body>
-
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here?</h3>
+            <p>
+              If you would like to organize your own, we recommend you to join a large consulting community in the world.
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <img src="assets/images/log.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              If you are already part of this beautiful community, log in to your Unique pay account.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <img src="assets/images/register.svg" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+            <!-- stats.js lib -->
+            <script src="js/particles.js"></script>
+    <script src="js/login_main.js"></script>
+  </body>
 </html>

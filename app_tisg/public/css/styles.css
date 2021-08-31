@@ -87,7 +87,6 @@ header{
     background: #2B3648;   
     height: 32.3rem;
     padding: 48px;
-
 }
 
 nav
@@ -101,7 +100,7 @@ nav
 nav .contenedor 
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     position: absolute;
     width: 100%;
     height: 50px;
@@ -112,6 +111,7 @@ nav .contenedor
 {
     display: inherit;
     align-items: center;
+    animation: abajo 1s ease-in;
 }
 
 /* Icono de la pagina web */
@@ -127,53 +127,11 @@ nav .contenedor
 .containerL .containerText h2
 {
     font-family: "Manrope-ExtraBold";
-    font-size: 18px;
+    font-size: 20px;
     color:#FFF;
     margin-right: 1rem;
     top: -3.57%;
 
-}
-
-.containerR
-{
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-/* Botn de "Login" */
-.loginbutton a button 
-{
-    width: 5rem;
-    height: 1.5rem;
-    border-radius: 8px;
-    background-color: #F1E4FF;
-    border: 2px solid #FFF;
-    font-family: "Manrope-Bold";
-    font-size: 12px;
-    color:#1976D2;
-    outline: none;
-    cursor: pointer;
-    margin-right: 1rem;
-    text-decoration: none;
-}
-
-/* Botn de "Sing up" */
-.singupButton a button 
-{
-    width: 5rem;
-    height: 1.5rem;
-    border-radius: 8px;
-    background-color: #1976D2;
-    border: 2px solid #1976D2;
-    font-family: "Manrope-Bold";
-    font-size: 12px;
-    color:#FFF;
-    outline: none;
-    cursor: pointer;
-    margin-right: 1rem;
-    text-decoration: none;
-    display: inline-block;
 }
 
 .container{
@@ -196,7 +154,7 @@ nav .contenedor
 
 .containimg  img{
     max-width: 100%;
-    height: 300px;
+    height: 500px;
     object-fit: cover;
     width: auto;
     position: relative;
@@ -213,7 +171,7 @@ nav .contenedor
     font-family: "Manrope-ExtraBold";
     font-weight: lighter;
     line-height: 4rem;
-    font-size: 38.6px;
+    font-size: 35px;
     text-transform: capitalize;
     color: #FFF;
     width: 100%;
@@ -222,7 +180,7 @@ nav .contenedor
 }
 
 .textos h2{
-    font-size: 18px;
+    font-size: 17px;
     color:#FFF;
     font-family: "Manrope-Regular";
     line-height: 2rem;
@@ -288,7 +246,19 @@ nav .contenedor
         transform: translate(0);
     }
 }
-@media screen and (min-width: 1500px){
+
+@keyframes abajo{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@media screen and (mi-width: 1300px){
     .containimg  img{
         height: 500px;
     }
@@ -310,7 +280,7 @@ nav .contenedor
 
 @media screen and (max-width:800px){
     .containimg  img{
-        height: 370px;
+        height: 350px;
     }
     .textos h1{
         font-size: 40px;
@@ -323,7 +293,7 @@ nav .contenedor
 
 @media screen and (max-width:700px){
     .containimg  img{
-        height: 250px;
+        height: 270px;
     }
     .textos h1{
         font-size: 30px;
@@ -339,6 +309,14 @@ nav .contenedor
     
     }
     
+}
+
+@media screen and (max-width:550px){
+    .containimg  img{
+        height: 200px;
+    
+    
+}
 }
 
 @media screen and (max-width:450px){
@@ -393,36 +371,6 @@ nav .contenedor
         background: #2B3648;
         position: relative;    
     }
-    .loginbutton a button {
-        width: 4rem;
-        height: 1.5rem;
-        background-color: #F1E4FF;
-        border: 2px solid #FFF;
-        font-family: "Manrope-Bold";
-        font-size: 11px;
-        color:#1976D2;
-        outline: none;
-        cursor: pointer;
-        margin-right: 1rem;
-        text-decoration: none;
-    }
-
-    /* Botn de "Sing up" */
-    .singupButton a button{
-        width: 4rem;
-        height: 1.5rem;
-
-        background-color: #1976D2;
-        border: 2px solid #1976D2;
-        font-family: "Manrope-Bold";
-        font-size: 11px;
-        color:#FFF;
-        outline: none;
-        cursor: pointer;
-        margin-right: 1rem;
-        text-decoration: none;
-        display: inline-block;
-    }
     .containerL img{
         max-width: 100%; 
         height: 3.5rem;
@@ -439,5 +387,3 @@ nav .contenedor
         top: -3.57%;
     }   
 }
-
-
