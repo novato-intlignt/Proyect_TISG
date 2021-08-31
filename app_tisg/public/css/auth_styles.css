@@ -149,6 +149,9 @@ form{
 .login-content .input-div.one{
 	margin-top: 0;
 }
+.login-content .register{
+	animation: arriba 1s ease-in;
+}
 
 .i{
 	color: #d9d9d9;
