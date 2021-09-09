@@ -20,3 +20,7 @@ function menuBtnChange() {
    closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
  }
 }
+var oClick = $('a[href^="seccion"]');
+oClick.click(function(){
+  alert(oClick);
+});

@@ -107,6 +107,7 @@ canvas {
 	align-items: center;
 	z-index: 1;
 	animation: moverIzquierda 1s ease-in;
+	object-fit: cover;
 }
 
 .login-content{
@@ -167,6 +168,7 @@ form{
 .input-div > div{
     position: relative;
 	height: 45px;
+	font-family: "Manrope-Regular";
 }
 
 .input-div > div > h5{
@@ -222,7 +224,7 @@ form{
 	background: none;
 	padding: 0.5rem 0.7rem;
 	font-size: 1.2rem;
-	color: #555;
+	color: white;
 	font-family: "Manrope-Bold";
 }
 
@@ -230,6 +232,11 @@ form{
 	margin-bottom: 4px;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
 a{
 	display: block;
 	text-align: right;

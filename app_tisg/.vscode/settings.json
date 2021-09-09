@@ -1,0 +1,18 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "askForPassword": true,
+            "driver": "MySQL",
+            "name": "Localhost",
+            "database": "tisg_db",
+            "username": "cubyto"
+        }
+    ],
+    "svg.preview.background": "custom"
+}
