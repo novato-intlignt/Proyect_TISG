@@ -1,3 +1,11 @@
+<?php 
+if(isset($_GET['Email'] )){
+	$Email = $_GET['Email'];
+}else{
+	header('Location: login.html');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -18,7 +26,7 @@
 			<img src="assets/images/auth_img.svg">
 		</div>
 		<div class="login-content">
-			<form action="admin_dash.html" method="POST">
+			<form action="../dev/Code_confirm.php" method="POST">
 				<img src="assets/images/avatar.svg">
 				<h2 class="title">Authenticate</h2>
 				<div class="input-div one">
@@ -27,7 +35,8 @@
 					</div>
 					<div class="div">
 						<h5>Code</h5>
-						<input type="number" class="input" autocomplete="off">
+						<input type="number" class="input" autocomplete="off" name="Codigo" require>
+						<input type="hidden" class="input" autocomplete="off" id="Email" name="Email" value="<?php echo $Email;?>">
 					</div>
 				</div>
 				<a href="#">Resend code?</a>

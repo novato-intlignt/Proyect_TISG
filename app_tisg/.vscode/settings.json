@@ -14,5 +14,6 @@
             "username": "cubyto"
         }
     ],
-    "svg.preview.background": "custom"
+    "svg.preview.background": "custom",
+    "liveServer.settings.port": 5501
 }

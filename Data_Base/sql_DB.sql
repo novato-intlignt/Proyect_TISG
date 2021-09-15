@@ -32,8 +32,9 @@ CREATE TABLE `tisg_db`.`pedidos` (
   `idClientes` INT NOT NULL,
   `Fecha` DATE NOT NULL,
   `idProducto` INT NOT NULL,
+  `Total` DECIMAL(19.4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE = InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --CREAMOS LA TABLA 'Productos'.
 CREATE TABLE `tisg_db`.`productos` (
@@ -41,9 +42,9 @@ CREATE TABLE `tisg_db`.`productos` (
   `Producto` VARCHAR(100) NOT NULL,
   `Code` INT(30) NOT NULL,
   `Precio` DECIMAL(19.4) NOT NULL,
-  `Cantidad` INT(100) NOT NULL;
+  `Cantidad` INT(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE = InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --CREAMOS LA TABLA 'Campañas'
 CREATE TABLE `tisg_db`.`Campañas` (
@@ -53,7 +54,7 @@ CREATE TABLE `tisg_db`.`Campañas` (
   `Nro_clientes` INT NOT NULL,
   `Total` DECIMAL(19, 4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE = InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --CREAMOS LA TABLA 'Consultoras'
 CREATE TABLE `tisg_db`.`Consultoras` (
@@ -63,7 +64,7 @@ CREATE TABLE `tisg_db`.`Consultoras` (
   `Email` VARCHAR(100) NULL,
   `Telefono` INT(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE = InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --CREAREMOS LAS RELACIONES ENTRE TABLESPACE:
 

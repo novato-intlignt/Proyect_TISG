@@ -1,6 +1,6 @@
 <?php
 // DESTINATARIO
-$to = "'.$Email.'";
+$to = 'destinatario@email.com';
 // TITULO
 $subject = "Gracias por registrarse con nosotros";
 
@@ -22,7 +22,7 @@ $message = '
   Correo: '.$Email.'
   ------------------------
   </p> Clic aqui:
-  <a href="http://127.0.0.1/app_tisg/public/auth.html?email='.$Email.'"> Verificar cuenta </a>
+  <a href="http://127.0.0.1/app_tisg/public/auth.php?Email='.$Email.'"> Verificar cuenta </a>
   <p>Tu codigo de verificacion es:</p>
  <h2>---'.$Codigo.'---</h2>
   
@@ -30,12 +30,13 @@ $message = '
 </html>
 ';
 // Para enviar un correo HTML, debe establecerse la cabecera Content-type
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "From: noreply@gmail.com" . "\r\n";
+$headers = 'From: noreply@example.com' . "\r\n";
+$headers.= "Reply-to: noreply@example.com" . "\r\n";
+$headers.= "X-Mailer: PHP/". phpversion();
 
 //VERIFICAMOS EL ENVIO DEL E-mail
-$Enviado = FALSE;
+$Enviado = false;
 if(mail($to, $subject, $message, $headers)){
-  $enviado = TRUE;
+  $enviado = true;
 }
 ?>

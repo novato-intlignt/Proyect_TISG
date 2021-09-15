@@ -16,15 +16,15 @@
       <div id="particles-js"></div>
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="admin_dash.html" class="sign-in-form">
+          <form action="../dev/User_confirm.php" class="sign-in-form" method="POST">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username"  autocomplete="off"/>
+              <input type="text" placeholder="Username"  autocomplete="off" name="Username" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password"  />
+              <input type="password" placeholder="Password" name="Pass" required/>
             </div>
             <input type="submit" value="Login" class="btn solid" required/>
             <p class="social-text">Or Sign in with social platforms</p>
@@ -41,19 +41,19 @@
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username"  autocomplete="off" name="Username"/>
+              <input type="text" placeholder="Username"  autocomplete="off" name="Username" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email"  autocomplete="off" name="Email"/>
+              <input type="email" placeholder="Email"  autocomplete="off" name="Email" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-phone"></i>
-              <input type="number" placeholder="Phonenumeber"  autocomplete="off" maxlength="9" name="Telefono"/>
+              <input type="number" placeholder="Phonenumeber"  autocomplete="off" maxlength="9" name="Telefono" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password"  autocomplete="off" name="Pass"/>
+              <input type="password" placeholder="Password"  autocomplete="off" name="Pass" required/>
             </div>
             <input type="submit" class="btn" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>
