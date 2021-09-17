@@ -258,15 +258,21 @@ nav .contenedor
         transform: translate(0);
     }
 }
-@media screen and (mi-width: 1300px){
+@media screen and (max-width:1200px){
     .containimg  img{
         height: 500px;
     }
     .texto h1{
-        font-size: 100px;
+        font-size: 80px;
     }
     .texto h2{
         font-size: 20px;
+    }
+    header{
+        background: #2B3648;   
+        height: 34.1rem;
+        padding: 48px;
+    
     }
 
 }
@@ -274,6 +280,12 @@ nav .contenedor
 @media screen and (max-width:1000px){
     .containimg  img{
         height: 400px;
+    }
+    header{
+        background: #2B3648;   
+        height: 43em;
+        padding: 48px;
+    
     }
 
 }
