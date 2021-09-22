@@ -24,3 +24,4 @@ var oClick = $('a[href^="seccion"]');
 oClick.click(function(){
   alert(oClick);
 });
+

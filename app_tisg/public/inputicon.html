@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Clientes</title>
+    <link rel="shortcut icon" href="assets/icons/logo-favicon.ico" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/clientes_styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="overlay active" id="overlay">
+        <div class="popup active" id="popup" >
+          <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">
+            <i class="fas fa-times"></i>
+          </a>
+          <div class="fecha">
+            <h2>NUEVO PEDIDO</h2>
+            <p class="dia" id="dia"></p>
+            <p>/</p>
+            <p class="mes" id="mes"></p>
+            <p class="devider" id="devider">/</p>
+            <p class="año" id="año"></p>
+          </div>
+          <form action="">
+            <div class="contain-inputs">
+    
+                <div class="client">
+                  <h3>Cliente</h3>
+                  <div class="inputs-client1">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Cliente" class="Cliente" name="Cliente">
+                  </div>
+                  <div class="inputs-client">
+                    <i class="fas fa-phone"></i>
+                    <input type="number" placeholder="Telefono" class="Telefono" name="Telefono" name="Telefono">
+                  </div>
+                  <div class="inputs-client">
+                    <i class="fas fa-smile-beam"></i>
+                    <input type="text" placeholder="Actitud" class="Actitud" name="Actitud" name="Actitud">
+                  </div>
+                </div>
+    
+                <div class="pedido">
+                  <h3>Pedido</h3>
+                  <div class="inputs-pedidos">
+                    <i class="fab fa-wpexplorer"></i>
+                    <input type="text" placeholder="Producto" class="Producto" id="Producto" name="Producto">
+                  </div>
+                  <div class="inputs-pedidos">
+                    <i class="fas fa-code"></i>
+                    <input type="number" placeholder="Codigo" class="Codigo" id="Codigo" name="Codigo">
+                  </div>
+                  <div class="inputs-pedidos">
+                    <i class="fas fa-sort-amount-down-alt"></i>
+                    <input type="text" placeholder="Cantidad" class="Cantidad" id="Cantidad" name="Cantidad">
+                  </div>
+                  <div class="inputs-pedidos">
+                    <i class="fas fa-tags"></i>
+                    <input type="text" placeholder="Precio" class="Precio" id="Precio" name="Precio">
+                  </div>
+                </div>
+            </div>
+            <input type="submit" class="btn-submit" value="Finalizar">
+          </form>
+        </div>
+      </div>
+</body>
+
+</html>

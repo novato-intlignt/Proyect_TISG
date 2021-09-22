@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
 <html lang="en" dir="ltr">
 
 <head>
@@ -7,6 +6,8 @@
   <link rel="shortcut icon" href="assets/icons/logo-favicon.ico" />
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/admin-dash_styles.css">
+  <link rel="stylesheet" href="css/popup.css">
+  <link rel="stylesheet" href="css/input.css">
   <!-- Boxicons CDN Link -->
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,11 +78,9 @@
   <div class="sections">
     <section class="section-pedidos" id="section-pedidos">
       <div class="text">Pedidos</div>
-      <a href="#">
-        <!-- <div class="box-pedidos"> -->
-          <i class="bx bxs-plus-circle box-icon"></i>
-          <p>Añadir Pedido</p>
-        <!-- </div> -->
+      <a id="btn-abrir-popup">
+        <i class="bx bxs-plus-circle box-icon"></i>
+        <p>Añadir Pedido</p>
       </a>
       <div class="contain_section">
         <div class="box-section">
@@ -113,10 +112,86 @@
       <div class="text">Nosotros</div>
     </section>
   </div>
-  <div class="overlay">
-    <div class="popup"></div>
+  <div class="overlay" id="overlay">
+    <div class="popup" id="popup" >
+      <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">
+        <i class="fas fa-times"></i>
+      </a>
+      <div class="fecha">
+        <h2>NUEVO PEDIDO</h2>
+        <p class="dia" id="dia"></p>
+        <p>/</p>
+        <p class="mes" id="mes"></p>
+        <p class="devider" id="devider">/</p>
+        <p class="año" id="año"></p>
+        <p class="año"></p>
+        <p class="año">s</p>
+      </div>
+      <form action="" method="POST">
+        <div class="contain-inputs">
+
+            <div class="client">
+              <h3>Cliente</h3>
+              <label class="custom-field three">
+                <input type="text" placeholder="&nbsp;" class="Cliente" name="Cliente" id="Cliente">
+                <span class="placeholder"><i class="fas fa-user icon"></i> Nombre</span>
+                <!-- <i class="fas fa-user icon"></i> -->
+                <span class="border"></span>
+              </label>
+              <label class="custom-field three">
+                <input type="number" placeholder="&nbsp;" class="Telefono" name="Telefono" id="Telefono">
+                <span class="placeholder"><i class="fas fa-phone"></i> Telefono</span>
+                <!-- <i class="fas fa-phone"></i> -->
+                <span class="border"></span>
+              </label>
+              <label class="custom-field three">
+                <input type="text" placeholder="&nbsp;" class="Actitud" name="Actitud" id="Actitud">
+                <span class="placeholder"><i class="fas fa-smile-beam"></i> Actitud</span>
+                <!-- <i class="fas fa-smile-beam"></i> -->
+                <span class="border"></span>
+              </label>
+            </div> 
+
+            <div class="pedido">
+              <h3>Pedido</h3>
+              <label class="custom-field three">
+                <input type="text" placeholder="&nbsp;" class="Producto" name="Producto" id="Producto">
+                <span class="placeholder"><i class="fab fa-wpexplorer"></i> Producto</span>
+                <!-- <i class="fas fa-code"></i> -->
+                <span class="border"></span>
+              </label>
+              <div class="inputpedido">
+                <label class="custom-field three">
+                  <input type="number" placeholder="&nbsp;" class="Codigo" name="Codigo" id="Codigo">
+                  <span class="placeholder"><i class="fas fa-code"></i> Codigo</span>
+                  <!-- <i class="fab fa-wpexplorer"></i> -->
+                  <span class="border"></span>
+                </label>
+                <label class="custom-field three">
+                  <input type="number" placeholder="&nbsp;" class="Cantidad" name="Cantidad" id="Cantidad">
+                  <span class="placeholder"><i class="fas fa-sort-amount-down-alt"></i> Cantidad</span>
+                  <!-- <i class="fas fa-sort-amount-down-alt"></i> -->
+                  <span class="border"></span>
+                </label>
+                <label class="custom-field three">
+                  <input type="number" placeholder="&nbsp;" class="Precio" name="Precio" id="Precio">
+                  <span class="placeholder"><i class="fas fa-tags"></i> Precio</span>
+                  <!-- <i class="fas fa-tags"></i> -->
+                  <span class="border"></span>
+                </label>
+              </div>
+            </div>
+                  
+        </div>
+        <input type="submit" class="btn-submit" id="btn_submit" value="Finalizar">
+      </form>
+    </div>
   </div>
   <script src="js/admin-dash_script.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/date.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/habilidar_btn.js"></script>
 </body>
 
 </html>

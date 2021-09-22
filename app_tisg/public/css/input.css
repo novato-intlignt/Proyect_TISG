@@ -1,0 +1,155 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.custom-field {
+    position: relative;
+    font-family: "Mulish";
+    font-weight: 500;
+    font-size: 12px;
+    border-top: 2px solid transparent;
+    margin: 5px;
+    --field-padding: 12px;
+}
+
+.custom-field input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #AFBDD1;
+    padding: var(--field-padding);
+    border-radius: 7px;
+    width: 180px;
+    outline: none;
+    font-size: 14px;
+    /* font-family: "Mulish";
+    font-weight: 500; */
+}
+
+.custom-field .placeholder {
+    position: absolute;
+    left: var(--field-padding);
+    width: calc(100% - (var(--field-padding) * 2));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 20px;
+    line-height: 100%;
+    transform: translateY(-50%);
+    color: #fff; /* color placeholder */
+    transition:
+        top 0.3s ease,
+        color 0.3s ease,
+        font-size 0.3s ease;
+}
+
+/* THREE */
+.custom-field.three {
+    --draw-duration: 0.1s;
+    --draw-color: #1976D2;
+    --draw-line-width: 2px;
+    --draw-easing: linear;
+}
+
+.custom-field.three .border {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: none;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    border-radius: 7px;
+}
+
+.custom-field.three .border::after,
+.custom-field.three .border::before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: inline-block;
+    position: absolute;
+    border-radius: 7px;
+}
+
+.custom-field.three .border::before {
+    left: 0;
+    bottom: 0;
+    border-right: 0px solid var(--draw-color);
+    border-bottom: 0px solid var(--draw-color);
+    transition:
+        border 0s linear calc(var(--draw-duration) * 4),
+        height var(--draw-duration) var(--draw-easing) calc(var(--draw-duration) * 2),
+        width var(--draw-duration) var(--draw-easing) calc(var(--draw-duration) * 3);
+}
+
+
+
+.custom-field.three input:focus~.border::before,
+.custom-field.three input:not(:placeholder-shown)~.border::before,
+.custom-field.three input.dirty~.border::before,
+.custom-field.three input:focus~.border::after,
+.custom-field.three input:not(:placeholder-shown)~.border::after,
+.custom-field.three input.dirty~.border::after {
+    width: 100%;
+    height: 100%;
+    border-width: var(--draw-line-width);
+}
+
+.custom-field.three input:not(:placeholder-shown)~.border::before,
+.custom-field.three input.dirty~.border::before,
+.custom-field.three input:focus~.border::before {
+    transition-delay: 0s, var(--draw-duration), 0s;
+}
+
+.custom-field.three input:not(:placeholder-shown)~.border::after,
+.custom-field.three input.dirty~.border::after,
+.custom-field.three input:focus~.border::after {
+    transition-delay:
+        calc(var(--draw-duration) * 2),
+        calc(var(--draw-duration) * 3),
+        calc(var(--draw-duration) * 2);
+}
+
+.custom-field.three input {
+    background: #56657F;
+    border: 2px solid #313C4E; /* borde blanco */
+    transition: border-color 0.3s ease;
+    height: 40px;
+    color: #fff;
+}
+
+.custom-field.three input+.placeholder+.icon {
+    left: 8px;
+    padding: 0 5px;
+}
+
+.custom-field.three input.dirty,
+.custom-field.three input:not(:placeholder-shown),
+.custom-field.three input:focus {
+    border-color: #1976D2;
+    transition-delay: .1s;
+}
+
+.custom-field.three input.dirty+.placeholder,
+.custom-field.three input:not(:placeholder-shown)+.placeholder,
+.custom-field.three input:focus+.placeholder {
+    top: 0;
+    font-size: 12px;
+    color: #fff;
+    background: #212936;
+    width: auto;
+}

@@ -6,14 +6,88 @@
     <link rel="shortcut icon" href="assets/icons/logo-favicon.ico" />
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/clientes_styles.css">
+    <link rel="stylesheet" href="css/input.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <section class="home-section" id="home">
-        <div class="text">Clientes</div>
-    </section>
+    <div class="overlay active" id="overlay">
+        <div class="popup active" id="popup" >
+          <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">
+            <i class="fas fa-times"></i>
+          </a>
+          <div class="fecha">
+            <h2>NUEVO PEDIDO</h2>
+            <p class="dia" id="dia"></p>
+            <p>/</p>
+            <p class="mes" id="mes"></p>
+            <p class="devider" id="devider">/</p>
+            <p class="año" id="año"></p>
+          </div>
+          <form action="">
+            <div class="contain-inputs">
+    
+                <div class="client">
+                  <h3>Cliente</h3>
+                  <label class="custom-field three">
+                    <input type="text" placeholder="&nbsp;" class="Cliente" name="Cliente">
+                    <span class="placeholder">Nombre</span>
+                    <!-- <i class="fas fa-user icon"></i> -->
+                    <span class="border"></span>
+                  </label>
+                  <div class="inputclient">
+                    <label class="custom-field three">
+                      <input type="number" placeholder="&nbsp;" class="Telefono" name="Telefono">
+                      <span class="placeholder">Telefono</span>
+                      <!-- <i class="fas fa-user icon"></i> -->
+                      <span class="border"></span>
+                    </label>
+                    <label class="custom-field three">
+                      <input type="text" placeholder="&nbsp;" class="Actitud" name="Actitud">
+                      <span class="placeholder">Actitud</span>
+                      <!-- <i class="fas fa-user icon"></i> -->
+                      <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+    
+                <div class="pedido">
+                  <h3>Pedido</h3>
+                  <label class="custom-field three">
+                    <input type="text" placeholder="&nbsp;" class="Producto" name="Producto">
+                    <span class="placeholder">Producto</span>
+                    <!-- <i class="fas fa-code"></i> -->
+                    <span class="border"></span>
+                  </label>
+                  <div class="inputclient">
+                    <label class="custom-field three">
+                      <input type="text" placeholder="&nbsp;" class="Codigo" name="Codigo">
+                      <span class="placeholder"><i class="fas fa-code"></i> Codigo</span>
+                      <!-- <i class="fab fa-wpexplorer"></i> -->
+                      <span class="border"></span>
+                    </label>
+                    <label class="custom-field three">
+                      <input type="text" placeholder="&nbsp;" class="Cantidad" name="Cantidad">
+                      <span class="placeholder"><i class="fas fa-sort-amount-down-alt"></i> Cantidad</span>
+                      <!-- <i class="fas fa-sort-amount-down-alt"></i> -->
+                      <span class="border"></span>
+                    </label>
+                    <label class="custom-field three">
+                      <input type="text" placeholder="&nbsp;" class="Precio" name="Precio">
+                      <span class="placeholder"><i class="fas fa-tags"></i> Precio</span>
+                      <!-- <i class="fas fa-tags"></i> -->
+                      <span class="border"></span>
+                    </label>
+                  </div>
+                </div>
+            </div>
+            <input type="submit" class="btn-submit" value="Finalizar">
+          </form>
+        </div>
+      </div>
+      <script src="js/input.js"></script>
 </body>
 
 </html>

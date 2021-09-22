@@ -28,15 +28,12 @@
 
 .popup {
   background-color: #212936;
-  border-radius: 8px;
-  /* border: 1px solid #313c4e; */
-  box-shadow: 0px 0px 30px 0px #313c4e;
-  ;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px 5px #313c4e;
   font-family: "Manrope";
   padding: 5px;
-  /* text-align: center; */
   width: 600px;
-  height: 250px;
+  height: 350px;
   transition: 0.s ease all;
   transform: scale(0.7);
   opacity: 0;
@@ -44,9 +41,8 @@
 
 .popup .btn-cerrar-popup {
   font-size: 16px;
-  /* line-height: 16px; */
+  line-height: 16px;
   padding: 0px 3px 0px 568px;
-  /* text-align: right; */
   color: white;
 
 }
@@ -90,7 +86,7 @@
   font-weight: 500;
   display: block;
   text-align: left;
-  /* margin-bottom: 0.3125rem; */
+  margin: 0.3125rem 2px 0.6250rem;
   color: white;
   width: 100%;
 }
@@ -98,10 +94,21 @@
   color: white;
 }
 
-.popup .contain-inputs .client .inputclient{
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.popup .contain-inputs .client {
   font-family: "Mulish";
   font-size: 15px;
   font-weight: 700;
+  margin-bottom: 0.3125rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -114,7 +121,14 @@
   display: flex;
   flex-wrap: wrap;
 }
-
+.popup .contain-inputs .pedido .inputpedido {
+  font-family: "Mulish";
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 0.3125rem;
+  display: flex;
+  flex-wrap: wrap;
+}
 /* -------------- */
 /* ANIMATIONS */
 /* -------------- */
@@ -123,7 +137,11 @@
   transform: scale(1);
   transition: .3s ease all;
 }
-
+.popup.active {
+  opacity: 1;
+  transform: scale(1);
+  transition: .3s ease all;
+}
 .popup.active .fecha {
   animation: entradaFecha 1s ease .3s forwards;
 }
@@ -133,9 +151,26 @@
 }
 
 .popup.active form .btn-submit {
+  opacity: 0;
   animation: entradaBtn 1s ease .3s forwards;
+  float: right;
+  background: #F1E4FF;
+  color: #1976D2;
+  height: 30px;
+  width: 75px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
 }
 
+.popup.active form .btn-submit:hover {
+  transition: 0.4s ease;
+  background: #1976D2;
+  color: #F1E4FF;
+  height: 32px;
+  width: 77px;
+}
 @keyframes entradaFecha {
   from {
     transform: translateY(-30px);

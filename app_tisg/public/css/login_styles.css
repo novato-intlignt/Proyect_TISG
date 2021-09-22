@@ -154,7 +154,7 @@ form.sign-in-form {
 	text-align: center;
 	line-height: 55px;
 	color: #acacac;
-	transition: 0.5s;
+	/* transition: 0.5s; */
 	font-size: 1.1rem;
 }
 
@@ -171,7 +171,6 @@ form.sign-in-form {
 .input-field input::placeholder {
 	color: #aaa;
 	font-weight: 500;
-
 }
 
 input[type=number]::-webkit-inner-spin-button,
